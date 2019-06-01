@@ -1,0 +1,16 @@
+{
+  "name": "trail-graphql-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "apollo-server": "latest",
+    "graphql": "latest"
+  }
+}
