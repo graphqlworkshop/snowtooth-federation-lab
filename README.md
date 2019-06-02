@@ -42,9 +42,9 @@ query {
 }
 ```
 
-## Challenge 4: Resolve external Trails
+## Challenge 4: Resolve external Trails (✅complete)
 
-From the `lifts` service, we need to extend the `Lift` type to resolve `Trail` entities. The following query should work from the gateway:
+Now we can request any data about a trail under the `trailAccess` field:
 
 ```graphql
 query {

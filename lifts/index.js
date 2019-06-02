@@ -10,6 +10,7 @@ const typeDefs = gql`
     capacity: Int!
     night: Boolean!
     elevationGain: Int!
+    trailAccess: [Trail!]!
   }
 
   extend type Trail @key(fields: "id") {
@@ -49,6 +50,9 @@ const resolvers = {
       updatedLift.status = status;
       return updatedLift;
     }
+  },
+  Lift: {
+    trailAccess: lift => lift.trails.map(id => ({ __typename: "Trail", id }))
   },
   Trail: {
     liftAccess: trail => lifts.filter(lift => lift.trails.includes(trail.id))

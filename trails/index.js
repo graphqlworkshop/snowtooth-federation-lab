@@ -51,6 +51,9 @@ const resolvers = {
       updatedTrail.status = status;
       return updatedTrail;
     }
+  },
+  Trail: {
+    __resolveReference: ({ id }) => trails.find(trail => trail.id === id)
   }
 };
 
