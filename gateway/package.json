@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node ."
+    "start": "nodemon ."
   },
   "keywords": [],
   "author": "",
@@ -13,5 +13,8 @@
     "@apollo/gateway": "latest",
     "apollo-server": "latest",
     "graphql": "latest"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
   }
 }

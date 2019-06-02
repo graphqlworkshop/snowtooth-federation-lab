@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Federated GraphQL services for snowtooth mountain",
   "scripts": {
-    "install": "cd lifts; npm i; cd ../trails; npm i",
-    "start": "echo '\n\nYou must start each services independently. \n1. Navigate to the lifts folder and run `npm start`\n2. then, in another terminal, navigate to the trails folder and run `npm start`.\n\n\n'"
+    "install": "cd lifts; npm i; cd ../trails; npm i; cd ../gateway; npm i",
+    "start": "echo '\n\nYou must start each services independently. \n1. Navigate to the lifts folder and run `npm start`\n2. then, in another terminal, navigate to the trails folder and run `npm start`.\n3. finally, in a new terminal, navigate to the gateway folder and run `npm start`\n\n\n'"
   },
   "repository": {
     "type": "git",
