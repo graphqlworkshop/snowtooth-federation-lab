@@ -3,7 +3,7 @@ const { buildFederatedSchema } = require("@apollo/federation");
 const lifts = require("./lift-data.json");
 
 const typeDefs = gql`
-  type Lift {
+  type Lift @key(fields: "id") {
     id: ID!
     name: String!
     status: LiftStatus!
@@ -52,6 +52,7 @@ const resolvers = {
     }
   },
   Lift: {
+    __resolveReference: ({ id }) => lifts.find(lift => lift.id === id),
     trailAccess: lift => lift.trails.map(id => ({ __typename: "Trail", id }))
   },
   Trail: {

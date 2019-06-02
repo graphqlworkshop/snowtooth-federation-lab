@@ -24,12 +24,19 @@ const trailRatings = [
     groomed: true
   },
   {
+<<<<<<< HEAD
     level: "ADVANCED",
     groomed: false
   },
   {
     level: "EXPERT",
     groomed: false
+=======
+    level: "ADVANCED"
+  },
+  {
+    level: "EXPERT"
+>>>>>>> Step 5: Add easiest Trail to Lift Service
   }
 ];
 
