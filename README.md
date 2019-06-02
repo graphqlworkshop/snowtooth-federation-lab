@@ -25,17 +25,16 @@ query {
 }
 ```
 
-## Challenge 3: Extend the Trail Entity
+## Challenge 3: Extend the Trail Entity (✅complete)
 
-From the `lifts` service, we need to extend the `Trail` entity. Add a field to `Trail` called `liftAccess` and resolve the `lift` types that access that trail. _Hint: the data for each lift contains a `trails` array_. Once complete the following query should work form the gateway:
+The `Trail` entity has been extended from the lift service. Now the following query can be ran.
 
 ```graphql
 query {
   allTrails {
-    id
     name
+    difficulty
     liftAccess {
-      id
       name
       status
     }

@@ -12,6 +12,11 @@ const typeDefs = gql`
     elevationGain: Int!
   }
 
+  extend type Trail @key(fields: "id") {
+    id: ID! @external
+    liftAccess: [Lift!]!
+  }
+
   enum LiftStatus {
     OPEN
     HOLD
@@ -44,6 +49,9 @@ const resolvers = {
       updatedLift.status = status;
       return updatedLift;
     }
+  },
+  Trail: {
+    liftAccess: trail => lifts.filter(lift => lift.trails.includes(trail.id))
   }
 };
 
