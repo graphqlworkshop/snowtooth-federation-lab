@@ -6,19 +6,21 @@ Snowtooth Mountain lift ops team has created a `Lift` service that provides lift
 
 Now both services are still independent, but they are ready to be composed behind the gateway. Both services now have the query `_service { sdk }` available to expose their schema.
 
-## Challenge 2: Create a Gateway
+## Challenge 2: Create a Gateway (✅complete)
 
-Now that we have federated services, we need to access them both from a single endpoint. Create a gateway services that allows me to query `allLifts` and `allTrails` from the same endpoint. The following query should work when sent to the gateway:
+Now two separate services are orchestrated through the Gateway. When you run queries here you can see the Query plan. It tells it that it is making two requests in parallel where it sends the approprate query to both services.
 
 ```graphql
 query {
   allLifts {
     id
     name
+    status
   }
   allTrails {
     id
     name
+    status
   }
 }
 ```
