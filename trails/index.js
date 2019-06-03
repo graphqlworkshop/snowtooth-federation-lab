@@ -59,5 +59,5 @@ const server = new ApolloServer({
 });
 
 server.listen(4002).then(({ url }) => {
-  console.log(`Trail Service running at ${url}`);
+  console.log(`🏔 Snowtooth - trail Service running at ${url}`);
 });

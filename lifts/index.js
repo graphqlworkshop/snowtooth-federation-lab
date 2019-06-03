@@ -52,5 +52,5 @@ const server = new ApolloServer({
 });
 
 server.listen(4001).then(({ url }) => {
-  console.log(`Lift Service running at ${url}`);
+  console.log(`🚠 Snowtooth Lift Service running at ${url}`);
 });
