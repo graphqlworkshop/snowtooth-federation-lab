@@ -1,33 +1,35 @@
 const trailRatings = [
   {
-    level: "beginner",
+    level: "BEGINNER",
     groomed: true
   },
   {
-    level: "beginner",
+    level: "BEGINNER",
     groomed: false
   },
   {
-    level: "intermediate",
+    level: "INTERMEDIATE",
     groomed: true
   },
   {
-    level: "advanced",
+    level: "ADVANCED",
     groomed: true
   },
   {
-    level: "intermediate",
+    level: "INTERMEDIATE",
     groomed: false
   },
   {
-    level: "expert",
+    level: "EXPERT",
     groomed: true
   },
   {
-    level: "advanced"
+    level: "ADVANCED",
+    groomed: false
   },
   {
-    level: "expert"
+    level: "EXPERT",
+    groomed: false
   }
 ];
 
