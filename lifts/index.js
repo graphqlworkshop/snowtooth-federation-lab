@@ -1,4 +1,5 @@
 const { ApolloServer, gql } = require("apollo-server");
+const { buildFederatedSchema } = require("@apollo/federation");
 const lifts = require("./lift-data.json");
 
 const typeDefs = gql`
@@ -47,8 +48,12 @@ const resolvers = {
 };
 
 const server = new ApolloServer({
-  typeDefs,
-  resolvers
+  schema: buildFederatedSchema([
+    {
+      typeDefs,
+      resolvers
+    }
+  ])
 });
 
 server.listen(4001).then(({ url }) => {
