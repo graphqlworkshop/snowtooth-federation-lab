@@ -58,21 +58,3 @@ query {
   }
 }
 ```
-
-## Challenge 5: Add easiest Trail to Lift Service
-
-The mountain ops team wants to provide an `easyWayDown` field for every lift so skiers will know the easiest route to the bottom no matter what lift they are on. The trail services has an algorithm for this, so we need to add an `easyWayDown` field to `Lift` entity from the trail service.
-
-```graphql
-query {
-  allLifts {
-    id
-    name
-    easyWayDown {
-      name
-      difficulty
-      status
-    }
-  }
-}
-```
