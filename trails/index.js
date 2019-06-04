@@ -3,7 +3,7 @@ const { buildFederatedSchema } = require("@apollo/federation");
 const trails = require("./trail-data.json");
 
 const typeDefs = gql`
-  type Trail {
+  type Trail @key(fields: "id") {
     id: ID!
     name: String!
     status: TrailStatus!
